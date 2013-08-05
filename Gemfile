@@ -40,7 +40,7 @@ gem 'devise'
 gem 'devise-encryptable'
 
 # eag added per Rail error
-gem 'protected_attributes'
+# gem 'protected_attributes'
 
 group :production do
   gem 'pg', '0.15.1'
