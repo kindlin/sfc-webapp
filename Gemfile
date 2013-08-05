@@ -33,7 +33,7 @@ end
 gem 'dispatcher'
 gem 'thin'
 
-gem 'active_scaffold', '3.1.18'
+# eag gem 'active_scaffold', '3.1.18'
 gem 'geocoder'
 gem 'authlogic'
 gem 'devise'
