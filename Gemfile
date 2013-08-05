@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 ruby '1.9.3'
 
 # gem 'rails', '3.2.14'
-gem 'rails', '3.1.12'
+gem 'rails', '3.1.8'
 
 group :assets do
   gem 'jquery-ui-rails'
