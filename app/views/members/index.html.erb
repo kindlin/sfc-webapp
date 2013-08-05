@@ -1,0 +1,49 @@
+<h1>Members List</h1>
+
+<table>
+  <tr>
+    <th>
+    <th>Name(s)</th>
+    <th>Email(s)</th>
+    <th>Phone</th>
+    <th>Member Since</th>
+    <% if current_member.admin %>
+    <th>Orders</th>
+    <th>Service</th>
+    <th></th>
+    <% end %>
+  </tr>
+
+<%
+ i = 1
+ @members.each do |member| 
+  row_bgcolor = nil
+  if member.disabled
+    row_bgcolor = "lightgrey"
+  elsif member.admin
+    row_bgcolor = "lightblue"
+  end
+ %>
+  <tr <%= "style=\"background: #{row_bgcolor};\"".html_safe unless row_bgcolor.nil? %>>
+    <th><%= i %>
+    <td><%= member.name %></td>
+    <td><%= member.email %><br><%= member.extra_emails.split(/[,\s]+/).join("<br>").html_safe unless member.extra_emails.nil? %></td>
+    <td><%= member.phone %></td>
+
+    <td><%= member.created_at.strftime('%Y-%m-%d') %> (<%= member.days_as_member %> days)</td>
+    <% if current_member.admin %>
+    <td><%= member.orders.length %>
+    <td><% n = member.consecutive_months_under_service %>
+        <%= n <= 0 ? "Ok" : "#{n} months under-service" %>
+    <td><%= link_to image_tag("/images/view_button.s.png",:border=>0), member %><br>
+        <%= link_to image_tag("/images/edit_button.s.png",:border=>0), edit_member_path(member) %><br>
+        <%= link_to image_tag("/images/nix_button.s.png",:border=>0), member, :confirm => 'Are you sure?', :method => :delete %><br>
+    <% end %>
+  </tr>
+<% 
+i += 1
+end %>
+</table>
+<br><br>
+Key: <span style="background: lightgrey;">Account Disabled</span>
+<span style="background: lightblue;">Admin</span>

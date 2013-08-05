@@ -1,0 +1,13 @@
+<%= form_for(@supplier) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="actions">
+    <%= image_submit_tag("/images/save_button.s.png",:border=>0) %>
+  </div>
+<% end %>

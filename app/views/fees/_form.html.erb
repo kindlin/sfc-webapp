@@ -1,0 +1,29 @@
+<%= form_for(@fee) do |f| %>
+  <div class="field">
+    <%= f.label :kind %><br />
+    <%= f.select(:kind,[["annual","annual"],["startup","startup"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :due %><br />
+    <%= f.date_select :due %>
+  </div>
+  <div class="field">
+    <%= f.label :member %><br />
+    <%= f.select(:member_id,Member.all.collect{ |m| [m.name,m.id] }) %>
+  </div>
+  <div class="field">
+    <%= f.label :paid %><br />
+    <%= f.check_box :paid %>
+  </div>
+  <div class="field">
+    <%= f.label :paid_with_paypal %><br />
+    <%= f.check_box :paypal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

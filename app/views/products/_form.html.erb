@@ -1,0 +1,26 @@
+<%= form_for(@product) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select :category, ["grains","meat","eggs","dairy","sweeteners","oil","produce","miscellany","beans","nuts","dried fruit","spices","seeds","tea","canned goods"] %>
+  </div>
+  <div class="field">
+    <%= f.label :units %><br />
+    <%= f.select :units, Product::Units %>
+  </div>
+  <div class="field">
+    <%= f.label :density %><br />
+    <%= f.text_field :density_g_per_ml %>
+  </div>
+  <div class="field">
+    <%= f.label :servings_per_unit %><br />
+    <%= f.text_field :servings_per_unit %>
+  </div>
+
+  <div class="actions">
+    <%= image_submit_tag("/images/save_button.s.png",:border=>0) %>
+  </div>
+<% end %>

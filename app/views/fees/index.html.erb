@@ -1,0 +1,49 @@
+<h1>Listing fees</h1>
+
+<table>
+  <tr>
+    <th>Kind</th>
+    <th>Amount</th>
+    <th>Due</th>
+    <th>Member</th>
+    <th>Marked paid by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fees.each do |fee| %>
+  <tr>
+    <td><%= fee.kind %></td>
+    <td><%= fee.amount %></td>
+    <td><%= fee.due %></td>
+    <td><%= fee.member.name %></td>
+    <td><%= fee.marked_paid_by.name unless fee.marked_paid_by.nil? %></td>
+    <td><% if current_member.admin? %>
+      <div style="text-align: center;">
+      <a href="/fees/<%= fee.id %>/toggle_paid?paypal=0"><%= image_tag("/images/check_" + (fee.paid ? "on" : "off") + ".s.png",:border=>0) %></a>
+      <a href="/fees/<%= fee.id %>/toggle_paid?paypal=1"><%= image_tag("/images/pp_check_" + (fee.paypal ? "on" : "off") + ".s.png",:border=>0) %></a>
+      </div>
+    <% end %>
+    <td>
+     <% unless fee.paid %>
+     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="thesecondkitchen@gmail.com">
+        <input type="hidden" name="item_name" value="Second Kitchen Fee #<%= fee.id %> (<%= fee.kind %>) for <%= fee.member.name %>">
+        <input type="hidden" name="amount" value="<%= sprintf("%.02f",fee.paypal_cost) %>">
+        <!-- <input type="hidden" name="notify_url" value=""> -->
+        <input type="image" name="submit" border="0"  
+             src="https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif"  
+             alt="PayPal - The safer, easier way to pay online">
+      </form>
+      <div style="text-align: center; font-size: 8pt;">(<%= sprintf("$%.02f",fee.paypal_cost) %> w/fees)</div>
+     <% end %>
+    <td><%= link_to  image_tag("/images/view_button.s.png",:border=>0), fee %></td>
+    <td><%= link_to  image_tag("/images/edit_button.s.png",:border=>0), edit_fee_path(fee) %></td>
+    <td><%= link_to  image_tag("/images/nix_button.s.png",:border=>0), fee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
