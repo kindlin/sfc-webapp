@@ -1,53 +1,25 @@
-source 'https://rubygems.org'
-ruby '1.9.3'
-#ruby-gemset=railstutorial_rails_4_0
+source 'http://rubygems.org'
 
-
-gem 'rails', '3.2.14'
-
-group :development do
-  gem 'sqlite3', '1.3.7'
-end
-
-gem 'sass-rails'
-gem 'uglifier', '2.1.1'
-gem 'coffee-rails'
-gem 'turbolinks', '1.1.1'
-# eag gem 'jbuilder', '1.0.2'
-
-group :doc do
-  gem 'sdoc', '0.3.20', require: false
-end
-
+gem 'rails'
 
 group :assets do
   gem 'jquery-ui-rails'
-# eag  gem 'jquery-rails', '2.2.1'
   gem 'jquery-rails'
 end 
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# gem 'sqlite3'
+gem 'sqlite3'
 gem 'dispatcher'
 gem 'thin'
 
-gem 'active_scaffold', '3.1.18'
+gem 'active_scaffold'
 gem 'geocoder'
 gem 'authlogic'
 gem 'devise'
 gem 'devise-encryptable'
-
-# eag added per Rail error
-# gem 'protected_attributes'
-
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
-
-#  gem 'pg'
+gem 'pg'
 # This gem is for moving data easily between databases
 # use rake db:data:dump to dump the data in your current db into a db/data.yaml
 # use rake db:data:load to load the data in that file into your current db
