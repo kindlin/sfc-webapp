@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails'
 
 group :assets do
@@ -23,7 +25,13 @@ gem 'geocoder'
 gem 'authlogic'
 gem 'devise'
 gem 'devise-encryptable'
-gem 'pg'
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+# gem 'pg'
+
 # This gem is for moving data easily between databases
 # use rake db:data:dump to dump the data in your current db into a db/data.yaml
 # use rake db:data:load to load the data in that file into your current db
