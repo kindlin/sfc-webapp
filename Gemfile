@@ -2,16 +2,15 @@ source 'http://rubygems.org'
 
 ruby '1.9.3'
 
+# Bundle edge Rails instead:
+gem 'rails', :git => 'git://github.com/rails/rails.git'
 # gem 'rails', '3.2.14'
-gem 'rails', '3.1.12'
+# gem 'rails', '3.1.12'
 
 group :assets do
   gem 'jquery-ui-rails'
   gem 'jquery-rails'
 end 
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
   gem 'sqlite3', '1.3.7'
@@ -25,6 +24,9 @@ gem 'active_scaffold'
 gem 'geocoder'
 gem 'authlogic'
 gem 'devise'
+# eag gem "devise", :git => "git://github.com/plataformatec/devise.git", :ref => "3ac399f2ff54f8188920f1c50546e83a025a8b96"
+
+
 gem 'devise-encryptable'
 
 group :production do
