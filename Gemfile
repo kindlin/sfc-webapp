@@ -4,8 +4,8 @@ ruby '1.9.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'rails', '3.2.14'
-# gem 'rails', '3.1.12'
+# gem 'rails', '3.2.14'
+gem 'rails', '3.1.12'
 # gem 'rails', '3.1.3' # November 20, 2011
 
 group :assets do
