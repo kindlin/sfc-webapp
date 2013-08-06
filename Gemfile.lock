@@ -46,7 +46,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    active_scaffold (3.2.20)
+    active_scaffold (3.1.18)
       rails (>= 3.1.3)
     arel (4.0.0)
     atomic (1.1.12)
@@ -134,7 +134,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  active_scaffold
+  active_scaffold (= 3.1.18)
   authlogic
   devise
   devise-encryptable
