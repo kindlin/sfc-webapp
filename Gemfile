@@ -4,9 +4,9 @@ ruby '1.9.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-# gem 'rails', '3.2.14'
+gem 'rails', '3.2.14'
 # gem 'rails', '3.1.12'
-gem 'rails', '3.1.3' # November 20, 2011
+# gem 'rails', '3.1.3' # November 20, 2011
 
 group :assets do
   gem 'jquery-ui-rails'
@@ -21,8 +21,8 @@ end
 gem 'dispatcher'
 gem 'thin'
 
-# gem 'active_scaffold'
-gem 'active_scaffold', '3.1.10'  # November 21, 2011
+gem 'active_scaffold'
+# gem 'active_scaffold', '3.1.10'  # November 21, 2011
 gem 'geocoder'
 gem 'authlogic'
 gem 'devise'
