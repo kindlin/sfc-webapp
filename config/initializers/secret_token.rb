@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SfcWebapp::Application.config.secret_key_base = 'bb1f32ab8e3446b69e7b21b1dcf69a9819bf3e7c4a8cfb1b2c055f080d05551986a1ef51346e441446553c2d0c8e4ad0197e6e19735d5953201279b093e74cfc'
+SunshineFoodCoop::Application.config.secret_key_base = 'bb1f32ab8e3446b69e7b21b1dcf69a9819bf3e7c4a8cfb1b2c055f080d05551986a1ef51346e441446553c2d0c8e4ad0197e6e19735d5953201279b093e74cfc'
