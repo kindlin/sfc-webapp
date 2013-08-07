@@ -25,8 +25,10 @@ gem 'thin'
 gem 'active_scaffold'
 # gem 'active_scaffold', '3.1.10'  # November 21, 2011
 gem 'geocoder'
-gem 'authlogic', '3.2.0'
-gem 'devise', '2.1.1'
+# gem 'authlogic', '3.2.0'
+# gem 'devise', '2.1.1'
+gem 'authlogic'
+gem 'devise'
 # gem "devise", :git => "git://github.com/plataformatec/devise.git", :ref => "3ac399f2ff54f8188920f1c50546e83a025a8b96"
 
 
