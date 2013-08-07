@@ -41,11 +41,11 @@ GEM
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
     daemons (1.1.9)
-    devise (3.0.1)
+    devise (2.1.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      warden (~> 1.2.3)
+      railties (~> 3.1)
+      warden (~> 1.2.1)
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     dispatcher (0.0.1)
@@ -133,7 +133,7 @@ PLATFORMS
 DEPENDENCIES
   active_scaffold
   authlogic
-  devise
+  devise (= 2.1.1)
   devise-encryptable
   dispatcher
   geocoder
