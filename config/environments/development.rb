@@ -15,7 +15,7 @@ Sunshinefoodcoop::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'order.theSunshinefoodcoop.org' }
+  config.action_mailer.default_url_options = { :host => 'order.Sunshinefoodcoop.org' }
   config.action_mailer.smtp_settings = {
     :address => 'localhost',
     :port => '25',

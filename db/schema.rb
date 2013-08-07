@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
     t.string   "name3"
     t.string   "email",                                     :null => false
     t.boolean  "admin",                  :default => false, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.text     "phone"
     t.text     "extra_emails"
     t.string   "encrypted_password",     :default => "",    :null => false
@@ -57,10 +57,10 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
 
   create_table "order_details", :force => true do |t|
     t.integer  "order_id"
-    t.decimal  "quantity"
+    t.decimal  "quantity",              :precision => 10, :scale => 2
     t.integer  "stock_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
     t.integer  "archived_supplier"
     t.integer  "archived_product"
     t.string   "archived_name"
@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
 
   create_table "orders", :force => true do |t|
     t.integer  "member_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.boolean  "taken",            :default => false, :null => false
     t.boolean  "paid",             :default => false, :null => false
     t.datetime "taken_at"
@@ -87,8 +87,8 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
     t.string   "units"
     t.string   "category"
     t.decimal  "density_g_per_ml",  :precision => 12, :scale => 6
@@ -99,8 +99,8 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
     t.integer  "member_id"
     t.decimal  "hours"
     t.string   "task"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "observed_by"
     t.datetime "did_at"
   end
@@ -133,11 +133,11 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
 
   create_table "stocks", :force => true do |t|
     t.string   "name"
-    t.decimal  "quantity"
-    t.decimal  "cost"
+    t.decimal  "quantity",     :precision => 10, :scale => 2
+    t.decimal  "cost",         :precision => 10, :scale => 2
     t.string   "origin"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                     :null => false
+    t.datetime "updated_at",                                                     :null => false
     t.integer  "supplier_id"
     t.integer  "product_id"
     t.decimal  "markup_pct",   :precision => 10, :scale => 2, :default => 0.0,   :null => false
@@ -148,8 +148,8 @@ ActiveRecord::Schema.define(:version => 20121210022229) do
   create_table "suppliers", :force => true do |t|
     t.string   "name"
     t.text     "address"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

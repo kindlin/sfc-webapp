@@ -31,9 +31,9 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
-    authlogic (3.2.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
+    authlogic (3.3.0)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
     bcrypt-ruby (3.1.1-x86-mingw32)
     builder (3.0.4)
     climate_control (0.0.3)
@@ -41,11 +41,11 @@ GEM
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
     daemons (1.1.9)
-    devise (2.1.1)
+    devise (3.0.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (~> 3.1)
-      warden (~> 1.2.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.3)
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     dispatcher (0.0.1)
@@ -132,8 +132,8 @@ PLATFORMS
 
 DEPENDENCIES
   active_scaffold
-  authlogic (= 3.2.0)
-  devise (= 2.1.1)
+  authlogic
+  devise
   devise-encryptable
   dispatcher
   geocoder
