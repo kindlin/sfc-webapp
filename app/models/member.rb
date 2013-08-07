@@ -39,7 +39,7 @@ class Member < ActiveRecord::Base
   end
 
   def days_as_member
-    ((Time.now - self.start_date.to_time)/(2400*24)).ceil
+    (Time.now.to_date - self.start_date).to_i
   end
 
   class Month<Date

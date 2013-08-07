@@ -8,14 +8,17 @@ class Fee < ActiveRecord::Base
   end
 
   def tax
+    return nil if self.pretax_cost.nil?
     (self.pretax_cost*(Setting.first.sales_tax/100.0)).round(2)
   end
 
   def cost
+    return nil if self.pretax_cost.nil?
     self.pretax_cost + self.tax
   end
 
   def paypal_cost
+    return nil if self.cost.nil?
     return self.cost + self.cost*(Setting.first.paypal_fee_percent/100.0) + Setting.first.paypal_fee_per
   end
 

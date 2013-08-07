@@ -3,10 +3,10 @@ class MembersController < ApplicationController
   before_filter :require_owner, :only => [:edit, :update]
 
   def require_owner
-    unless current_member and current_member.admin or params[:id] == current_member.id
+    unless current_member and (current_member.admin or (params[:id].to_i == current_member.id))
       store_location
       flash[:notice] = "Hey, that's not yours!"
-      redirect_to account_path
+      redirect_to root_path
     end
   end
 
@@ -32,7 +32,7 @@ class MembersController < ApplicationController
     unless current_member.admin or @member.id == current_member.id
       store_location
       flash[:notice] = "Hey, that's not yours!"
-      redirect_to account_path
+      redirect_to root_path
     else
       respond_to do |format|
         format.html { render :show } # show.html.erb

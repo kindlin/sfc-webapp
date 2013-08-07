@@ -54,14 +54,14 @@
   <% whut = "(limited = 'f') OR (limited = 't' AND quantity > 0.0)"
      whut = "1 = 1" if current_member.admin
      Stock.where(whut,:order => "product_id,name").sort{ |x,y|
-      a = x.product.nil? ? "Unknown" : x.product.category
-      b = y.product.nil? ? "Unknown" : y.product.category
-      a <=> b
-    }.each{ |e|
-      cat = e.product.nil? ? "Unknown" : e.product.category
-      if cat != last_category
-        last_category = cat
-      %>
+       a = x.product.nil? ? "Unknown" : x.product.category
+       b = y.product.nil? ? "Unknown" : y.product.category
+       a <=> b
+     }.each{ |e|
+       cat = e.product.nil? ? "Unknown" : e.product.category
+       if cat != last_category
+         last_category = cat
+   %>
     <tr><th colspan=5 style="background: lightblue;"><%= cat.capitalize %></th></tr>
     <% end %>
 
