@@ -1,0 +1,21 @@
+<h1>Listing suppliers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @suppliers.each do |supplier| %>
+  <tr>
+    <td><%= supplier.name %></td>
+    <td><%= supplier.address %></td>
+    <td><%= link_to image_tag("/images/view_button.s.png",:border=>0), supplier %></td>
+    <td><%= link_to image_tag("/images/edit_button.s.png",:border=>0), edit_supplier_path(supplier) %></td>
+    <td><%= link_to image_tag("/images/nix_button.s.png",:border=>0), supplier, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
