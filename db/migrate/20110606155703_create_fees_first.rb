@@ -1,4 +1,4 @@
-class CreateFees < ActiveRecord::Migration
+class CreateFeesFirst < ActiveRecord::Migration
   def self.up
     create_table :fees do |t|
       t.references :member
