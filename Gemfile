@@ -16,6 +16,7 @@ group :assets do
 #  gem 'jquery-ui-rails'
 #  gem 'jquery-rails', '2.3.0'
 #  gem 'jquery-rails'
+gem 'uglifier'
 end 
 
 group :development do
