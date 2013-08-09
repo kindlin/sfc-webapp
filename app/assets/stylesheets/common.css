@@ -18,14 +18,14 @@ body{
 
 /* Header */
 .header{
-  background: #6ecdc1;
+  background: #ffff33;
   border-bottom: 2px solid #E5E5E5;
   padding: 10px;
   overflow: auto;
 }
 
 .header .logo_image{
-  float: right;
+  float: left;
   height: 100px;
 }
 

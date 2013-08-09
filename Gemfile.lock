@@ -141,6 +141,7 @@ DEPENDENCIES
   devise
   devise-encryptable
   dispatcher
+  execjs
   geocoder
   gmaps4rails
   jquery-rails (= 2.3.0)
