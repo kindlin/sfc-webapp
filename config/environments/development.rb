@@ -13,15 +13,20 @@ Sunshinefoodcoop::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+
+  # Used for Postmark emailer
+  config.action_mailer.delivery_method = :postmark
+  config.action_mailer.postmark_settings = { :api_key => "your-api-key" }
+
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'order.Sunshinefoodcoop.org' }
-  config.action_mailer.smtp_settings = {
-    :address => 'localhost',
-    :port => '25',
-    :domain => 'virgil.smallwhitecube.com',
-    :enable_starttls_auto => false
-  }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_url_options = { :host => 'Sunshinefoodcoop.org' }
+  # config.action_mailer.smtp_settings = {
+  #   :address => 'localhost',
+  #   :port => '25',
+  #   :domain => 'Sunshinefoodcoop.org',
+  #   :enable_starttls_auto => false
+  # }
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

@@ -55,6 +55,10 @@ gem 'yaml_db'
 gem 'paperclip'
 gem 'gmaps4rails'
 
+# Added for Postmark emailer
+gem 'postmark-rails'
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
