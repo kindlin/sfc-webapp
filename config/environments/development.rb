@@ -20,10 +20,10 @@ Sunshinefoodcoop::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.default_url_options = { :host => 'http://Sunshinefoodcoop.org' }
+  config.action_mailer.default_url_options = { :host => 'Sunshinefoodcoop.org' }
   config.action_mailer.only_path = true
   config.action_mailer.smtp_settings = {
-    :address => 'localhost',
+    :address => 'smtpout.secureserver.net',
     :port => '25',
     :domain => 'Sunshinefoodcoop.org',
     :enable_starttls_auto => false
