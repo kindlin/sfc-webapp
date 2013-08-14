@@ -23,7 +23,7 @@ Sunshinefoodcoop::Application.configure do
   config.action_mailer.default_url_options = { :host => 'order.sunshinefoodcoop.org' }
   config.action_mailer.only_path = true
   config.action_mailer.smtp_settings = {
-      :address => 'localhost',
+      :address => 'smtp.postmarkapp.com',
       :port => '25',
       :domain => 'smtp.postmarkapp.com',
       :enable_starttls_auto => false
