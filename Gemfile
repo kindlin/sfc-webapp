@@ -12,7 +12,9 @@ gem 'rails', '3.2.11'
 gem 'execjs'
 
 gem 'jquery-ui-rails'
-gem 'jquery-rails', '2.3.0'
+# gem 'jquery-rails', '2.3.0'
+gem 'jquery-rails
+
 
 group :assets do
 #  gem 'jquery-ui-rails'
