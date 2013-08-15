@@ -59,6 +59,10 @@ module Sunshinefoodcoop
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    #  While precompiling assets, in Rails 3.x, you can prevent initializing your application
+    #  and connecting to the database by ensuring that the following line is in your config/application.rb:
+    config.assets.initialize_on_precompile = false
+
     # Enable the Postmark emailer
     config.action_mailer.delivery_method = :postmark
     config.action_mailer.postmark_settings = { :api_key => "your-api-key" }
