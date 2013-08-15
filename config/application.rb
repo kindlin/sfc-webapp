@@ -65,7 +65,7 @@ module Sunshinefoodcoop
 
     # Enable the Postmark emailer
     config.action_mailer.delivery_method = :postmark
-    config.action_mailer.postmark_settings = { :api_key => "your-api-key" }
+    config.action_mailer.postmark_settings = { :api_key => "62dbcbc1-80c5-44a3-8b64-fe2bf883a8bf" }
 
   end
 end
