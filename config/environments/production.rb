@@ -1,4 +1,4 @@
-Sunshinefoodcoop::Application.configure do
+Sunshinefoodproject::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -51,7 +51,7 @@ Sunshinefoodcoop::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.default_url_options = { :host => 'order.sunshinefoodcoop.org' }
+  config.action_mailer.default_url_options = { :host => 'order.Sunshinefoodproject.org' }
 
   # Enable threaded mode
   # config.threadsafe!

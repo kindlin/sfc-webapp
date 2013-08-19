@@ -4,7 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Sunshinefoodcoop::Application.load_tasks
+Sunshinefoodproject::Application.load_tasks
 
 task(:nightly => :environment) do
   settings = Setting.first

@@ -1,4 +1,4 @@
-Sunshinefoodcoop::Application.routes.draw do
+Sunshinefoodproject::Application.routes.draw do
 
   resources :stock_votes do
     collection do

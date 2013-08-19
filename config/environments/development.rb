@@ -1,4 +1,4 @@
-Sunshinefoodcoop::Application.configure do
+Sunshinefoodproject::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -20,7 +20,7 @@ Sunshinefoodcoop::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'order.sunshinefoodcoop.org' }
+  config.action_mailer.default_url_options = { :host => 'order.Sunshinefoodproject.org' }
   config.action_mailer.only_path = true
   config.action_mailer.smtp_settings = {
       :address => 'smtp.postmarkapp.com',
