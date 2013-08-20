@@ -31,7 +31,7 @@ class ServicesController < ApplicationController
       unless one.to_i != 1
         params[:service][:hours][member_id] = Setting.first.workshare_hours_per_month
       end
-    }
+    } unless params[:service][:done].nil?
     params[:service][:hours].each{ |member_id,amt|
       next if amt.nil? or (amt.kind_of? String and amt.strip == "")
       task = params[:service][:task][member_id]
@@ -42,7 +42,7 @@ class ServicesController < ApplicationController
         failed = true
         break
       end
-    }
+    } unless params[:service][:hours].nil?
     
     respond_to do |format|
       unless failed
