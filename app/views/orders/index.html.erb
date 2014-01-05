@@ -48,7 +48,7 @@ Past orders are used to estimate demand and generate reports, so please don't de
      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">  
         <input type="hidden" name="cmd" value="_xclick">  
         <input type="hidden" name="business" value="info@sunshinefoodproject.org">
-        <input type="hidden" name="item_name" value="Second Kitchen Order #<%= order.id %> for <%= order.member.name %>">  
+        <input type="hidden" name="item_name" value="Sunshine Food Project Order #<%= order.id %> for <%= order.member.name %>">  
         <input type="hidden" name="amount" value="<%= sprintf("%.02f",order.paypal_cost) %>">  
         <!-- <input type="hidden" name="notify_url" value=""> -->
         <input type="image" name="submit" border="0"  
