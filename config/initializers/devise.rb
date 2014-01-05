@@ -83,6 +83,12 @@ Devise.setup do |config|
   # a value less than 10 in other environments.
   config.stretches = Rails.env.test? ? 1 : 10
 
+  # Added by eag due to errors
+  # Connecting to database specified by DATABASE_URL rake aborted!
+  # Devise.secret_key was not set. Please add the following to your Devise initializer:
+  config.secret_key = '883ce7bffb73ddbac50877c86b51e23121e2245e92e76b425da035e2b9d995ef9cc6b2c6b8a4bdc949b4abf4b3d668074b33a05a3de8f95c2b281bdb48ed06f7'
+
+
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "75f65deac0443ebc467de3c71db47375f16a3fdd7b284ce823cfab9ab76fb5e89c9840f575d4444f42162b3c2baf5f3f00cdd86771f0f6bab7be51c8ed731ed7"
 
