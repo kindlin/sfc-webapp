@@ -51,8 +51,7 @@ Past orders are used to estimate demand and generate reports, so please don't de
 ">
         <input type="hidden" name="business" value="Sunshine Food Project">
         <input type="hidden" name="item_name" value="Sunshine Food Project Order #<%= order.id %> for <%= order.member.name %>">  
-        <input type="hidden" id="item_price" name="amount" value="<%= order.paypal_cost %>">
-        <!-- <input type="hidden" name="amount" value="<%= sprintf("$%.02f",order.paypal_cost) %>"> -->
+        <input type="hidden" id="item_price" name="amount" value="<%= sprintf("%.02f",order.paypal_cost) %>">
         <!-- <input type="hidden" name="notify_url" value=""> -->
         <input type="image" name="submit" border="0"  
              src="https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif"  
