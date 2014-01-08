@@ -47,7 +47,7 @@ Past orders are used to estimate demand and generate reports, so please don't de
      <% unless order.paid %>
 
 
-     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">  
+     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">  
         <input type="hidden" name="cmd" value="_xclick">  
         <input type="hidden" name="business" value="grider@i4ds.com">
         <input type="hidden" name="item_name" value="Sunshine Food Project Order #<%= order.id %> for <%= order.member.name %>">  
