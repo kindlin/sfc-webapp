@@ -33,7 +33,7 @@
 
      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="grider@i4ds.com">
+        <input type="hidden" name="business" value="info@sunshinefoodproject.org">
         <input type="hidden" name="item_name" value="Sunshine Food Project Fee #<%= fee.id %> (<%= fee.kind %>) for <%= fee.member.nil? ? "?" : fee.member.name %>">
         <input type="hidden" name="amount" value="<%= sprintf("%.02f",fee.paypal_cost) %>">
         <!-- <input type="hidden" name="notify_url" value=""> -->
